@@ -6,19 +6,31 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Category: 个人博客搭建 | 爱烨子的前端汪的个人博客</title>
+  <title>redux基础分享 | 爱烨子的前端汪的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
-<meta name="keywords" content="web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5">
-<meta property="og:type" content="website">
-<meta property="og:title" content="爱烨子的前端汪的个人博客">
-<meta property="og:url" content="http://yoursite.com/categories/个人博客搭建/index.html">
+  <meta name="description" content="redux初步认识">
+<meta name="keywords" content="redux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redux基础分享">
+<meta property="og:url" content="http://yoursite.com/2019/10/30/redux-base/index.html">
 <meta property="og:site_name" content="爱烨子的前端汪的个人博客">
-<meta property="og:description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
+<meta property="og:description" content="redux初步认识">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://img.ikstatic.cn/MTU3MTg5NjM1MDg1NiM2MzIjZ2lm.gif">
+<meta property="og:image" content="https://img.ikstatic.cn/MTU3MTg5NTE0NzQwNCM4MjAjcG5n.png">
+<meta property="og:image" content="https://img.ikstatic.cn/MTU3NTEwMDg4MTkwMSM5MDQjcG5n.png">
+<meta property="og:image" content="https://img.ikstatic.cn/MTU3MjMzMzQ3NzY1MSM1NDIjanBn.jpg">
+<meta property="og:image" content="https://img.ikstatic.cn/MTU3MjMzMzQ4MDc5NiMxNTIjanBn.jpg">
+<meta property="og:image" content="https://img.ikstatic.cn/MTU3MTgwMTkzNjczMSM0NjkjanBn.jpg">
+<meta property="og:image" content="https://img.ikstatic.cn/MTU3MTk2NzMxNzY2NCM3MzgjanBn.jpg">
+<meta property="og:image" content="https://img.ikstatic.cn/MTU3MTk2OTUzMzQyMCM2OTQjanBn.jpg">
+<meta property="og:image" content="https://img.ikstatic.cn/MTU3MjI3NTQ0NjM0OCM3ODMjanBn.jpg">
+<meta property="og:image" content="https://img.ikstatic.cn/MTU3MjMyMjMwOTYyNyMyOTMjZ2lm.gif">
+<meta property="og:updated_time" content="2019-11-30T08:22:06.400Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爱烨子的前端汪的个人博客">
-<meta name="twitter:description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
+<meta name="twitter:title" content="redux基础分享">
+<meta name="twitter:description" content="redux初步认识">
+<meta name="twitter:image" content="https://img.ikstatic.cn/MTU3MTg5NjM1MDg1NiM2MzIjZ2lm.gif">
   
     <link rel="alternative" href="/atom.xml" title="爱烨子的前端汪的个人博客" type="application/atom+xml">
   
@@ -151,71 +163,418 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-redux-base" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/20/hexo/" class="archive-article-date">
-  	<time datetime="2019-10-20T15:56:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/20/hexo/">​如何搭建个人博客框架--hexo</a>
+    <h1 class="article-title" itemprop="name">
+      redux基础分享
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/10/30/redux-base/" class="archive-article-date">
+  	<time datetime="2019-10-30T15:56:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="redux初识"><a href="#redux初识" class="headerlink" title="redux初识"></a>redux初识</h3><p>目录</p>
+<ul>
+<li>一、在后台管理项目开发中的思考</li>
+<li>二、为什么会出现状态难以管理的问题</li>
+<li>三、redux基本概念 </li>
+<li>四、redux三大原则</li>
+<li>五、redux组成部分：action、reducer、store</li>
+<li>六、redux部分源码剖析</li>
+<li>七、React-Redux使用</li>
+<li>八、Redux DevTools工具使用</li>
+</ul>
+<a id="more"></a>
+<p>ppt内容地址：<a href="https://github.com/wangtengyz/ppt" target="_blank" rel="noopener">https://github.com/wangtengyz/ppt</a> （拉下代码后直接点击redux.html打开即可）<br>ppt使用工具—reveal.js ：github地址：<a href="https://github.com/hakimel/reveal.js" target="_blank" rel="noopener">https://github.com/hakimel/reveal.js</a><br>demo地址：github地址：<a href="https://github.com/wangtengyz/reduxDemo" target="_blank" rel="noopener">https://github.com/wangtengyz/reduxDemo</a></p>
+<h3 id="一、在后台管理项目开发中的思考"><a href="#一、在后台管理项目开发中的思考" class="headerlink" title="一、在后台管理项目开发中的思考"></a>一、在后台管理项目开发中的思考</h3><p>当我们使用React开发web应用程序时，在React组件内，可以使用this.setState()和this.state处理或访问组件内状态，但是随着项目变大，状态变复杂，通常需要考虑组件间通信问题，主要包括以下两点：</p>
+<p>某一个状态需要在多个组件间共享（访问，更新）；</p>
+<p>某组件内交互需要触发其他组件的状态更新；</p>
+<p>关于这些问题，React组件开发实践推荐将公用组件状态提升：</p>
+<p><a href="https://react.docschina.org/docs/lifting-state-up.html" target="_blank" rel="noopener">https://react.docschina.org/docs/lifting-state-up.html</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Often, several components need to reflect the same changing data.  We recommend lifting the shared state up to their closest common ancestor</span><br><span class="line">通常多组件需要处理同一状态，我们推荐将共享状态提升至他们的共同最近祖先组件内。</span><br></pre></td></tr></table></figure>
+
+<p>举个日常开发项目例子 </p>
+<p><img src="https://img.ikstatic.cn/MTU3MTg5NjM1MDg1NiM2MzIjZ2lm.gif" alt="举例" title="举例"></p>
+<p>然后咱们看下文件目录 - 不便于维护和迭代</p>
+<p><img src="https://img.ikstatic.cn/MTU3MTg5NTE0NzQwNCM4MjAjcG5n.png" alt="举例" title="举例"></p>
+<p>最后咱们再看看一个用了react-redux的项目开发目录对比一下</p>
+<p><img src="https://img.ikstatic.cn/MTU3NTEwMDg4MTkwMSM5MDQjcG5n.png" alt="举例" title="举例"></p>
+<h3 id="二、为什么会出现状态难以管理的问题"><a href="#二、为什么会出现状态难以管理的问题" class="headerlink" title="二、为什么会出现状态难以管理的问题"></a>二、为什么会出现状态难以管理的问题</h3><p>因为React就是一个简单的轻量级的视图层框架。React 主要的关注点是如何创建可用的视图层组件，对于组件之间的数据传递和状态管理并没有给出很好的解决方案。<br>可能会有人有疑问，老铁！你是不是忘了context，</p>
+<p>在React中使用Context并不是那么容易，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">父组件提供Context需要通过childContextTypes进行“声明”</span><br><span class="line"></span><br><span class="line">子组件使用父组件的Context属性需要通过contextTypes进行“申请”</span><br></pre></td></tr></table></figure>
+
+<p>React的Context是一种“带权限”的组件作用域， 用多了会有什么问题？</p>
+<p>React App的组件是树状结构，一层一层延伸，父子组件是一对多的线性依赖。随意的使用Context其实会破坏这种依赖关系，导致组件之间一些不必要的额外依赖，降低组件的复用性，进而可能会影响到App的可维护性。</p>
+<p><img src="https://img.ikstatic.cn/MTU3MjMzMzQ3NzY1MSM1NDIjanBn.jpg" alt="举例" title="举例"><br><img src="https://img.ikstatic.cn/MTU3MjMzMzQ4MDc5NiMxNTIjanBn.jpg" alt="举例" title="举例"></p>
+<p>通过上图可以看到，原本线性依赖的组件树，由于子组件使用了父组件的Context，导致<child>组件对<node>和<app>都产生了依赖关系。一旦脱离了这两个组件，<child>的可用性就无法保障了，减低了<child>的复用性。</child></child></app></node></child></p>
+<p>一切组件都是建立在树形结构下，咱们看下这些应用场景：</p>
+<ul>
+<li><p>组件管理自己的state:简单</p>
+</li>
+<li><p>组件管理子组件的state:通过props，简单</p>
+</li>
+<li><p>组件管理子组件的子组件:通过props传递到子组件，子组件再通过props传递，复杂</p>
+</li>
+<li><p>一般组件管理子组件的子。。。。:通过props不断传递，复杂</p>
+</li>
+<li><p>一般组件传递状态给兄弟的子节点。。。</p>
+</li>
+<li><p>组件传递给父组件的父组件。。。</p>
+</li>
+</ul>
+<p>React管理不断变化的 state 非常困难，如果一个 model 的变化会引起另一个 model 变化，那么当 view 变化时，就可能引起对应 model 以及另一个 model 的变化，依次地，可能会引起另一个 view 的变化。直至你搞不清楚到底发生了什么。state 在什么时候，由于什么原因，如何变化已然不受控制当系统变得错综复杂的时候，想重现问题或者添加新功能就会变得举步维艰。</p>
+<p>当数据和组件或者页面不和页面强关联时，那样你就不会觉的复杂了。</p>
+<p>这就好比恋爱，要先认识女孩，再牵手，再接吻，最后你才能嗯…，成为男女朋友关系。这种形式肯定不符合一些现在人的快速生活的节奏，无聊了怎么办？所以就有了很多陪玩服务，陪聊服务的盛行等等，极大的方便了现代人的需求。</p>
+<p>在开发中讲的就是效率，效率就需要把事情变简单，那只有React肯定不符合大型项目和快速开发。</p>
+<p>需要视图层框架+数据层框架，两个相互结合，就可以更容易解决状态难以管理点的问题。</p>
+<p>项目未使用redux和已使用的区别</p>
+<p><img src="https://img.ikstatic.cn/MTU3MTgwMTkzNjczMSM0NjkjanBn.jpg" alt="举例" title="举例"></p>
+<p>状态管理解决方案之一-Redux</p>
+<ul>
+<li>Redux通过一系列约定的规范将修改应用状态的步骤标准化，让应用状态的管理不再错综复杂，而是如同一根长线般清晰</li>
+<li>Redux是目前React生态中，较（最）好的数据层框架。同类型的还有Mobx，Jumpsuit，Alt.js / dav等。</li>
+<li>Redux在react中使用还需加上React绑定库react-redux，食用更佳。</li>
+</ul>
+<h3 id="三、-redux基本概念"><a href="#三、-redux基本概念" class="headerlink" title="三、 redux基本概念"></a>三、 redux基本概念</h3><p>Redux是一个用来管理管理数据状态和UI状态的JavaScript应用工具</p>
+<p>Redux的思想继承自Facebook官方的Flux架构，但比Flux更加简洁易用</p>
+<p> 简而言之，Redux就是降低管理难度的。（Redux支持React，Angular、jQuery甚至纯JavaScript）</p>
+<p>redux官方图片- 工作流程</p>
+<p><img src="https://img.ikstatic.cn/MTU3MTk2NzMxNzY2NCM3MzgjanBn.jpg" alt="举例" title="举例"></p>
+<p>图书馆版本</p>
+<p><img src="https://img.ikstatic.cn/MTU3MTk2OTUzMzQyMCM2OTQjanBn.jpg" alt="举例" title="举例"></p>
+<h3 id="四、redux三大原则"><a href="#四、redux三大原则" class="headerlink" title="四、redux三大原则"></a>四、redux三大原则</h3><pre><code>1.唯一数据源
+
+ Redux应用只维护一个全局的状态对象，存储在Redux的store中。唯一数据源是一种集中式管理应用状态的方式，便于监控任意时刻应用的状态和调试应用，减少出错的可能性。
+
+2.保持应用状态只读
+
+在任何时候都不能直接修改应用状态。当需要修改应用状态时，必须发送一个action，由这个action描述如何修改应用状态。这一看似烦琐的修改状态的方式实际上是Redux状态管理流程的核心，保证了在大型复杂应用中状态管理的有序进行。
+
+3.应用状态的改变通过纯函数完成
+
+action表明修改应用状态的意图，真正对应用状态做修改的是reducer。reducer必须是纯函数，所以reducer在接收到action时，不能直接修改原来的状态对象，而是要创建一个新的状态对象 返回。</code></pre><h3 id="五、redux主要组成部分：action、reducer、store"><a href="#五、redux主要组成部分：action、reducer、store" class="headerlink" title="五、redux主要组成部分：action、reducer、store"></a>五、redux主要组成部分：action、reducer、store</h3><ol>
+<li>action</li>
+</ol>
+<ul>
+<li><p>action是Redux中信息的载体，是store唯一的信息来源</p>
+</li>
+<li><p>把action发送给store必须通过store的dispatch方法</p>
+</li>
+<li><p>action是普通的JavaScript对象，但每个action必须有一个type属性描述action的类型，type一般被定义为字符串常量</p>
+</li>
+<li><p>除了type属性外，action的结构完全由自己决定，但应该确保action的结构能清晰地描述实际业务场景</p>
+</li>
+<li><p>一般通过action creator创建action，action  creator是返回action的函数</p>
+</li>
+</ul>
+<p>例如下面是一个新增待办事项的action creator</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const addItem = text =&gt; &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        type: &apos;ADD_ITEM&apos;,</span><br><span class="line">        text</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>reducer</li>
+</ol>
+<ul>
+<li><p>action用于描述应用发生了什么操作，reducer则根据action做出响应，决定如何修改应用的状态state。</p>
+</li>
+<li><p>既然是修改state，那么就应该在编写reducer前设计好state。</p>
+</li>
+<li><p>state既可以包含服务器端获取的数据，也可以包含UI状态。</p>
+</li>
+<li><p>Reducers 指定了应用状态的变化如何响应 actions 并发送到 store 的，</p>
+</li>
+<li><p>记住 actions 只是描述了有事情发生了这一事实，并没有描述应用如何更新 state。</p>
+</li>
+</ul>
+<p>reducer是一个纯函数，它接 收两个参数，当前的state和action，返回新的state。reducer函数签名如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(previousState, action) =&gt; newState</span><br></pre></td></tr></table></figure>
+
+<p>我们先来创建一个最基本的reducer：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import &#123; ADD_ITEM &#125; from &apos;./action&apos;</span><br><span class="line">const defaultState = &#123;</span><br><span class="line">   list: [&quot;早上6点跑步&quot;]</span><br><span class="line">&#125;;</span><br><span class="line">export default function reducer (state = defaultState, action) &#123;</span><br><span class="line">    const &#123; type,payload &#125; = action;</span><br><span class="line">    switch (type) &#123;</span><br><span class="line">        case ADD_ITEM:</span><br><span class="line">        return  Object.assign(&#123;&#125;, state, &#123;</span><br><span class="line">            list:[...payload]</span><br><span class="line">        &#125;)   </span><br><span class="line">        default:</span><br><span class="line">            return state;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>3.store</p>
+<p>store是Redux中的一个对象，也是action和reducer之间的桥梁。store主要负责以下几个工作：</p>
+<ul>
+<li><p>保存应用状态</p>
+</li>
+<li><p>通过方法getState()访问应用状态</p>
+</li>
+<li><p>通过方法dispatch(action)发送更新状态的意图</p>
+</li>
+<li><p>通过方法subscribe(listener)注册监听函数、监听应用状态的改变</p>
+</li>
+</ul>
+<p>一个Redux应用中只有一个store，store保存了唯一数据源。</p>
+<p>store通过createStore()函数创建，创建时需要传递reducer作为参数</p>
+<p>创建应用的store的代码示例如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import &#123;createStore&#125; from &apos;redux&apos;</span><br><span class="line">import reducer from &apos;./reducer&apos;</span><br><span class="line">// 创建store 并将reducer作为参数传入</span><br><span class="line">const store = createStore(reducer)</span><br><span class="line">export default store</span><br></pre></td></tr></table></figure>
+
+<p>通过简单demo1,demo2演示三者作用 github地址：<a href="https://github.com/wangtengyz/reduxDemo" target="_blank" rel="noopener">https://github.com/wangtengyz/reduxDemo</a></p>
+<p>总结下redux流程</p>
+<ol>
+<li><p>调用store.dispatch(action)。一个action是一个用于描述“发生了 什么”的对象。store.dispatch(action)可以在应用的任何地方调用，包括组 件、XHR 的回调，甚至在定时器中。</p>
+</li>
+<li><p>Redux的store调用reducer函数。store传递两个参数给reducer：当前应用的状态和action。reducer必须是一个纯函数，它的唯一职责是 计算下一个应用的状态。</p>
+</li>
+<li><p>根reducer会把多个子reducer的返回结果组合成最终的应用状态。根reducer的构建形式完全取决于用户。Redux提供了combineReducers，方便把多个拆分的子reducer组合到一起，但完全可以不使用它。当使用combineReducers时，action会传递给每一个子reducer 处理，子reducer处理后的结果会合并成最终的应用状态。</p>
+</li>
+<li><p>Redux的store保存根reducer返回的完整应用状态。此时，应用状态才完成更新。如果UI需要根据应用状态进行更新，那么这就是更新UI的时机。对于React应用而言，可以在这个时候调用组件的setState方 法，根据新的应用状态更新UI。</p>
+</li>
+</ol>
+<h3 id="六、redux部分源码剖析"><a href="#六、redux部分源码剖析" class="headerlink" title="六、redux部分源码剖析"></a>六、redux部分源码剖析</h3><p>redux源码目录结构</p>
+<p><img src="https://img.ikstatic.cn/MTU3MjI3NTQ0NjM0OCM3ODMjanBn.jpg" alt="举例" title="举例"></p>
+<p>大家看目录结构，一共有 6 个文件，先说下各个文件大概功能</p>
+<ul>
+<li><p>utils 控制台输出警告、用于判断是否简单对象的函数、帮助开发者检查不要使用redux自带的action的类型</p>
+</li>
+<li><p>applyMiddlewar.js 使用自定义的 middleware 来扩展 Redux</p>
+</li>
+<li><p>bindActionCreators.js 把 action creators 转成拥有同名 keys 的对象,使用时可以直接调用</p>
+</li>
+<li><p>combineReducers.js 一个比较大的应用，需要对 reducer 函数 进行拆分，拆分后的每一块独立负责管理 state 的一部分</p>
+</li>
+<li><p>compose.js 从右到左来组合多个函数，函数编程中常用到</p>
+</li>
+<li><p>createStore.js 创建一个 Redux Store 来放所有的state</p>
+</li>
+<li><p>index.js是整个redux的入口文件</p>
+</li>
+</ul>
+<p>这次主要剖析下createStore.js文件</p>
+<p>函数createStore接受三个参数（reducer、preloadedState、enhancer）</p>
+<p>主要说一下enhancer，中文名叫增强器，顾名思义就是来增强redux的，实际上就是一个高阶函数，它的参数是创建store的函数（store creator），返回值是一个可以创建功能更加强大的store的函数(enhanced store creator)，这和React中的高阶组件的概念很相似。</p>
+<p>它的类型的是Function，createStore.js里有这么一行代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if (typeof enhancer !== &apos;undefined&apos;) &#123;</span><br><span class="line">    if (typeof enhancer !== &apos;function&apos;) &#123;</span><br><span class="line">        throw new Error(&apos;Expected the enhancer to be a function.&apos;)</span><br><span class="line">    &#125;</span><br><span class="line">    return enhancer(createStore)(reducer, preloadedState)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>常见的enhancer就是redux-thunk以及redux-saga，一般都会配合applyMiddleware一起使用， 而applyMiddleware的作用就是将这些enhancer格式化成符合redux要求的enhancer，</p>
+<p>import { createStore, applyMiddleware } from ‘redux’;<br>import thunk from ‘redux-thunk’;<br>import rootReducer from ‘./reducers/index’;<br>const store = createStore(<br>rootReducer,<br>applyMiddleware(thunk)<br>);</p>
+<p>疑问：createStore函数第二个参数不是preloadedState吗？redux其实做了这么一层转换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if (typeof preloadedState === &apos;function&apos; &amp;&amp; typeof enhancer === &apos;undefined&apos;) &#123;</span><br><span class="line">    enhancer = preloadedState</span><br><span class="line">    preloadedState = undefined</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>函数createStore执行完之后返回的对象都有什么？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">return &#123;</span><br><span class="line">    dispatch,</span><br><span class="line">    subscribe,</span><br><span class="line">    getState,</span><br><span class="line">    replaceReducer,</span><br><span class="line">    [$$observable]: observable</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>他返回了有这么几个方法，其中前三个最为常用,下面主要剖析下这些</p>
+<p>先看下文件里的常量声明</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let currentReducer = reducer //从函数createStore第一个参数reducer获得</span><br><span class="line">let currentState = preloadedState as S //从函数createStore第二个参数preloadedState获得</span><br><span class="line">let currentListeners: (() =&gt; void)[] | null = [] //当前订阅者列表</span><br><span class="line">let nextListeners = currentListeners // 新的订阅者列表</span><br><span class="line">let isDispatching = false // 作为锁来用，同一个时间里,防止两个action同时触发reducer对同一数据的修改</span><br></pre></td></tr></table></figure>
+
+<p>1.dispatch方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">function dispatch(action) &#123;</span><br><span class="line"> // 判断action是否为简单对象(凡不是new Object()或者字面量的方式构建出 的对象都不是简单对象,该对象的__proto__等于Object.prototype)</span><br><span class="line">    if (!isPlainObject(action)) &#123;</span><br><span class="line">            throw new Error(</span><br><span class="line">                      &apos;Actions must be plain objects. &apos; +</span><br><span class="line">                        &apos;Use custom middleware for async actions.&apos;</span><br><span class="line">                    )</span><br><span class="line">                  &#125;</span><br><span class="line">                  // 判断action.type是否存在</span><br><span class="line">                  if (typeof action.type === &apos;undefined&apos;) &#123;</span><br><span class="line">                    throw new Error(</span><br><span class="line">                      &apos;Actions may not have an undefined &quot;type&quot; property. &apos; +</span><br><span class="line">                        &apos;Have you misspelled a constant?&apos;</span><br><span class="line">                    )</span><br><span class="line">                  &#125;</span><br><span class="line">                  // 判断当前是否有执行其他的reducer操作</span><br><span class="line">                  if (isDispatching) &#123;</span><br><span class="line">                    throw new Error(&apos;Reducers may not dispatch actions.&apos;)</span><br><span class="line">                  &#125;</span><br><span class="line">                  // 为啥要用try finally</span><br><span class="line">                  // 执行前isDispatching设置为true，阻止后续的action进来触发reducer操作</span><br><span class="line">                  // 得到的state值赋值给currentState，完成之后再finally里将isDispatching再改为false</span><br><span class="line">                  // 允许后续的action进来触发reducer操作</span><br><span class="line">                  // 接着一一通知订阅者做数据更新，不传入任何参数。最后返回当前的action</span><br><span class="line">                  try &#123;</span><br><span class="line">                    isDispatching = true</span><br><span class="line">                    currentState = currentReducer(currentState, action)</span><br><span class="line">                  &#125; finally &#123;</span><br><span class="line">                    isDispatching = false</span><br><span class="line">                  &#125;</span><br><span class="line">                  // 函数dispatch里面将nextListeners和currentListeners引用了同一个数组</span><br><span class="line">                  </span><br><span class="line">                  const listeners = (currentListeners = nextListeners)</span><br><span class="line">                  for (let i = 0; i &lt; listeners.length; i++) &#123;</span><br><span class="line">                    const listener = listeners[i]</span><br><span class="line">                    listener()</span><br><span class="line">                  &#125;</span><br><span class="line">              </span><br><span class="line">                  return action</span><br><span class="line">                &#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.getState方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function getState() &#123;</span><br><span class="line">    if (isDispatching) &#123;</span><br><span class="line">        throw new Error(</span><br><span class="line">        &apos;You may not call store.getState() while the reducer is     executing.  &apos; +</span><br><span class="line">        &apos;The reducer has already received the state as an argument. &apos; +</span><br><span class="line">        &apos;Pass it down from the top reducer instead of reading it from the store.&apos;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">    return currentState</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>getState相比较dispatch要简单许多,返回currentState即可， 这currentState在每次dispatch得时候都会得到响应的更新， 为了保证数据的一性，当在reducer操作的时候，是不可以读取当前的state值的；</p>
+<p>咱们看了源码后，getState函数返回state的时候，并没有对currentState做一层拷贝再给我们，所以是可以直接修改的；</p>
+<p>store通过getState得出的state是可以直接被更改的，但是redux不允许这么做，因为这样不会通知订阅者更新数据；</p>
+<p>3.subscribe方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">function subscribe(listener) &#123;</span><br><span class="line">// 判断监听者是否为函数</span><br><span class="line">if (typeof listener !== &apos;function&apos;) &#123;</span><br><span class="line">throw new Error(&apos;Expected the listener to be a function.&apos;)</span><br><span class="line">&#125;</span><br><span class="line">// 是否有reducer正在进行数据修改（保证数据的一致性）</span><br><span class="line">if (isDispatching) &#123;</span><br><span class="line">throw new Error(</span><br><span class="line">&apos;You may not call store.subscribe() while the reducer is executing. &apos; +</span><br><span class="line">&apos;If you would like to be notified after the store has been updated, subscribe from a &apos; +</span><br><span class="line">&apos;component and invoke store.getState() in the callback to access the latest state. &apos; +</span><br><span class="line">&apos;See https://redux.js.org/api-reference/store#subscribe(listener) for more details.&apos;</span><br><span class="line">)</span><br><span class="line">&#125;</span><br><span class="line">let isSubscribed = true //表示该订阅者在订阅状态中，true-订阅中，false-取消订阅</span><br><span class="line"></span><br><span class="line">ensureCanMutateNextListeners() // 判断nextListeners和currentListeners是否为同一个引用</span><br><span class="line">// 当nextListeners和currentListeners为同一个引用时，则做一层浅拷贝,</span><br><span class="line">// 为什么要拆开？</span><br><span class="line">// 防止当redux在通知所有订阅者的时候，此时又有一个新的订阅者加进来，就会打乱原有的顺序</span><br><span class="line">// function ensureCanMutateNextListeners() &#123;</span><br><span class="line">// if (nextListeners === currentListeners) &#123;</span><br><span class="line">// nextListeners = currentListeners.slice()</span><br><span class="line">// &#125;</span><br><span class="line">//&#125;</span><br><span class="line">nextListeners.push(listener)</span><br><span class="line">return function unsubscribe() &#123;</span><br><span class="line">// 是否已经取消订阅（已取消的不必执行）</span><br><span class="line">if (!isSubscribed) &#123;</span><br><span class="line">return</span><br><span class="line">&#125;</span><br><span class="line">// 是否有reducer正在进行数据修改（保证数据的一致性）</span><br><span class="line">if (isDispatching) &#123;</span><br><span class="line">throw new Error(</span><br><span class="line">&apos;You may not unsubscribe from a store listener while the reducer is executing. &apos; +</span><br><span class="line">&apos;See https://redux.js.org/api-reference/store#subscribe(listener) for more details.&apos;</span><br><span class="line">)</span><br><span class="line">&#125;</span><br><span class="line">isSubscribed = false</span><br><span class="line">ensureCanMutateNextListeners()</span><br><span class="line">const index = nextListeners.indexOf(listener)</span><br><span class="line">nextListeners.splice(index, 1)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="七、React-Redux使用"><a href="#七、React-Redux使用" class="headerlink" title="七、React-Redux使用"></a>七、React-Redux使用</h3><p>下载安装react-redux</p>
+<p>npm install –save react-redux</p>
+<p>react-redux仅有2个API，Provider和connect</p>
+<ol>
+<li>Provider是顶层组件的作用，将store作为上下文提供给全局共享</li>
+</ol>
+<p>Provider是一个提供器，只要使用了这个组件，组件里边的其它所有组件都可以使用store了，这也是React-redux的核心组件了</p>
+<p>Provider 使组件层级中的 connect() 方法都能够获得 Redux store。正常情况下，你的根组件应该嵌套在 <provider> 中才能使用 connect() 方法</provider></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render(</span><br><span class="line">    &lt;Provider store=&#123;store&#125;&gt;</span><br><span class="line">         &lt;App /&gt;</span><br><span class="line">    &lt;/Provider&gt;,</span><br><span class="line">    document.getElementById(&apos;root&apos;)</span><br><span class="line"> )</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>connect方法做的事情是将state和dispatch绑定到Connect组件的参数上,Connect组件是局部组件，将某个react组件包装起来，传递指定的state和props给该组件访问</p>
+<pre><code>connect([mapStateToProps], [mapDispatchToProps], [mergeProps], [options])参数</code></pre></li>
+</ol>
+<ul>
+<li><p>[mapStateToProps(state, [ownProps]): stateProps] (Function): 如定义该参数，组件将会监听 Redux store 的变化。任何时候，只要 Reduxstore 发生改变，mapStateToProps 函数就会被调用。该回调函数必须返回个纯对象，这个对象会与组件的 props 合并。如果你省略了这个参数，你的件将不会监听 Redux store。如果指定了该回调函数中的第二个参数ownProps，则该参数的值为传递到组件的 props，而且只要组件接收到新的props，mapStateToProps 也会被调用。</p>
+<ul>
+<li>[mapDispatchToProps(dispatch, [ownProps]): dispatchProps] (Object or Function): 如果传递的是一个对象，那么每个定义在该对象的函数都将被当作 Redux action creator，对象所定义的方法名将作为属性名；每个方法将返回一个新的函数，函数中dispatch方法会将action creator的返回值作为参数执行。这些属性会被合并到组件的 props 中。如果你省略这个 mapDispatchToProps 参数，默认情况下，dispatch 会注入到你的组件 props 中。</li>
+</ul>
+</li>
+<li><p>[mergeProps(stateProps, dispatchProps, ownProps): props] (Function): 如果指定了这个参数，mapStateToProps() 与 mapDispatchToProps() 的执行结果和组件自身的 props 将传入到这个回调函数中。该回调函数返回的对象将作为 props 传递到被包装的组件中。你也许可以用这个回调函数，根据组件的 props 来筛选部分的 state 数据，或者把 props 中的某个特定变量与 action creator 绑定在一起。如果你省略这个参数，默认情况下返回 Object.assign({}, ownProps, stateProps, dispatchProps) 的结果。</p>
+</li>
+<li><p>[options] (Object) 如果指定这个参数，可以定制 connector 的行为。<br>[pure = true] (Boolean): 如果为 true，connector 将执行 shouldComponentUpdate 并且浅对比 mergeProps 的结果，避免不必要的更新，前提是当前组件是一个“纯”组件，它不依赖于任何的输入或 state 而只依赖于 props 和 Redux store 的 state。默认值为 true。<br>[withRef = false] (Boolean): 如果为 true，connector 会保存一个对被包装组件实例的引用，该引用通过 getWrappedInstance() 方法获得。默认值为 false。</p>
+</li>
+</ul>
+<p>简单demo3示例</p>
+<p>connect是把UI组件（无状态组件）和业务逻辑代码的分开，然后通过connect再链接到一起，让代码更加清晰和易于维护。</p>
+<p>八、Redux DevTools工具使用</p>
+<p>第一步 科学上网下载Redux DevTools插件在浏览器上</p>
+<p>第二步 按照示例位置输入window.<strong>REDUX_DEVTOOLS_EXTENSION</strong> &amp;&amp; window.<strong>REDUX_DEVTOOLS_EXTENSION</strong>())</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import &#123;createStore&#125; from &apos;redux&apos;</span><br><span class="line">import reducer from &apos;./reducer&apos;</span><br><span class="line">// 创建store 并将reducer作为参数传入</span><br><span class="line">const store = createStore(reducer,</span><br><span class="line">// 使用redux—tool工具</span><br><span class="line">window.__REDUX_DEVTOOLS_EXTENSION__ &amp;&amp; window.__REDUX_DEVTOOLS_EXTENSION__())</span><br><span class="line">export default store</span><br></pre></td></tr></table></figure>
+
+<p>第三步 按F12打开浏览器尽情食用<br><img src="https://img.ikstatic.cn/MTU3MjMyMjMwOTYyNyMyOTMjZ2lm.gif" alt="举例" title="举例"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redux</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/个人博客搭建//" class="article-tag-list-link color2">个人博客搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/30/redux-base/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/10/20/hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">​如何搭建个人博客框架--hexo</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#redux初识"><span class="toc-number">1.</span> <span class="toc-text">redux初识</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一、在后台管理项目开发中的思考"><span class="toc-number">2.</span> <span class="toc-text">一、在后台管理项目开发中的思考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、为什么会出现状态难以管理的问题"><span class="toc-number">3.</span> <span class="toc-text">二、为什么会出现状态难以管理的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、-redux基本概念"><span class="toc-number">4.</span> <span class="toc-text">三、 redux基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、redux三大原则"><span class="toc-number">5.</span> <span class="toc-text">四、redux三大原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、redux主要组成部分：action、reducer、store"><span class="toc-number">6.</span> <span class="toc-text">五、redux主要组成部分：action、reducer、store</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、redux部分源码剖析"><span class="toc-number">7.</span> <span class="toc-text">六、redux部分源码剖析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七、React-Redux使用"><span class="toc-number">8.</span> <span class="toc-text">七、React-Redux使用</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -238,10 +597,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
 		root: "/",
@@ -301,6 +660,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">redux</a>
               </li>
             
             <div class="clearfix"></div>

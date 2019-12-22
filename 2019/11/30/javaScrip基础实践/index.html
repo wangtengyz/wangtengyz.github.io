@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/10 | 爱烨子的前端汪的个人博客</title>
+  <title>javaScrip基础实践（一） | 爱烨子的前端汪的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
-<meta name="keywords" content="web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5">
-<meta property="og:type" content="website">
-<meta property="og:title" content="爱烨子的前端汪的个人博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/10/index.html">
+  <meta name="description" content="javaScrip基础实践">
+<meta name="keywords" content="javaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javaScrip基础实践（一）">
+<meta property="og:url" content="http://yoursite.com/2019/11/30/javaScrip基础实践/index.html">
 <meta property="og:site_name" content="爱烨子的前端汪的个人博客">
-<meta property="og:description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
+<meta property="og:description" content="javaScrip基础实践">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-12-22T11:42:41.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爱烨子的前端汪的个人博客">
-<meta name="twitter:description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
+<meta name="twitter:title" content="javaScrip基础实践（一）">
+<meta name="twitter:description" content="javaScrip基础实践">
   
     <link rel="alternative" href="/atom.xml" title="爱烨子的前端汪的个人博客" type="application/atom+xml">
   
@@ -151,98 +152,224 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-javaScrip基础实践" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/redux-base/" class="archive-article-date">
-  	<time datetime="2019-10-30T15:56:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/30/redux-base/">redux基础分享</a>
+    <h1 class="article-title" itemprop="name">
+      javaScrip基础实践（一）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/11/30/javaScrip基础实践/" class="archive-article-date">
+  	<time datetime="2019-11-30T08:31:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="javaScrip基础实践及代码编写风格规范"><a href="#javaScrip基础实践及代码编写风格规范" class="headerlink" title="javaScrip基础实践及代码编写风格规范"></a>javaScrip基础实践及代码编写风格规范</h2><h3 id="一、位元运算符"><a href="#一、位元运算符" class="headerlink" title="一、位元运算符"></a>一、位元运算符</h3><ol>
+<li>基础介绍，计算机用二进制表示数字，8个位（bit，简写为b）组成一个字节（Byte，简写为B），是最小一级的信息单位。比如：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">// 1 = 00000001</span><br><span class="line">// 2 = 00000010</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<a id="more"></a>
+<ol start="2">
+<li><p>javaScript的位元运算类似逻辑运算，他们作用于每个独特的bit;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// 1 = 00000001</span><br><span class="line">// 2 = 00000010</span><br><span class="line">// OR = 00000011</span><br><span class="line">// AND = 00000000</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">console.log(1 | 2) // 位元运算符或OR  ==&gt; 3</span><br><span class="line"></span><br><span class="line">console.log(1 &amp; 2) // 位元运算符或AND  ==&gt; 0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实际运用-权限控制：<br>假如用户有三种权限，读取、写入、操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// Read、Write、Execute</span><br><span class="line">// 00000100 代表有读取权限</span><br><span class="line">// 00000010 代表有写入权限</span><br><span class="line">// 00000001 代表有操作权限</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>用位运算符来处理权限:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const readPermission = 4;</span><br><span class="line">const writePermission = 2;</span><br><span class="line">const executePermission = 1;</span><br><span class="line">let myPermission = 0;</span><br><span class="line">myPermission = myPermission | writePermission;</span><br><span class="line">let message = (myPermission &amp; readPermssion) ? &apos;yes&apos; : &apos;no&apos;;</span><br><span class="line">console.log(message) // no</span><br></pre></td></tr></table></figure>
+
+<h3 id="二、FizzBuzz问题"><a href="#二、FizzBuzz问题" class="headerlink" title="二、FizzBuzz问题"></a>二、FizzBuzz问题</h3><p>写一个方法打印1到100这些数字。但是遇到数字为3的倍数的时候，打印“Fizz”替代数字，5的倍数用“Buzz”代替，既是3的倍数又是5的倍数打印“FizzBuzz”。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">for(let i=0;i&lt;100;i++)&#123;</span><br><span class="line">    console.log(fizzBuzz(i))</span><br><span class="line">&#125;</span><br><span class="line">function fizzBuzz(input) &#123;</span><br><span class="line">    if(typeof input !== &apos;number&apos; || isNaN(input)) return &apos;Not a number&apos;</span><br><span class="line">    if(input % 3 ===0 &amp;&amp; input % 5 === 0) return &apos;FizzBuzz&apos;</span><br><span class="line">    if(input % 3 ===0) return &apos;Fizz&apos;</span><br><span class="line">    if(input % 5 ===0) return &apos;Buzz&apos;</span><br><span class="line">    return input</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>主要在函数内更早的将不同的条件排除或者return出去，方便后续业务功能的维护。</p>
+<h3 id="三、编码风格"><a href="#三、编码风格" class="headerlink" title="三、编码风格"></a>三、编码风格</h3><p>写一个方法，传入一个数字，获得0到该数字之内所有被3或5整除之和；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">console.log(sum(10))</span><br><span class="line">function sum(limit) &#123;</span><br><span class="line">    let sum = 0;</span><br><span class="line"></span><br><span class="line">    for(let i = 1; i &lt;= limit; i++ )</span><br><span class="line">        if(i % 3 === 0 || i % 5 === 0)</span><br><span class="line">            sum += i</span><br><span class="line"></span><br><span class="line">    return sum</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用空行将变量初始化、代码逻辑、返回部分分开，便于阅读，高度相关的代码应该紧靠在一起，与别的不相干代码分开；</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/30/javaScrip基础实践/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/20/hexo/" class="archive-article-date">
-  	<time datetime="2019-10-20T15:56:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/12/20/Less语法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Less语法笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/28/node-sass/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">node-sass 安装失败的原因及解决办法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/20/hexo/">​如何搭建个人博客框架--hexo</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#javaScrip基础实践及代码编写风格规范"><span class="toc-number">1.</span> <span class="toc-text">javaScrip基础实践及代码编写风格规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、位元运算符"><span class="toc-number">1.1.</span> <span class="toc-text">一、位元运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、FizzBuzz问题"><span class="toc-number">1.2.</span> <span class="toc-text">二、FizzBuzz问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、编码风格"><span class="toc-number">1.3.</span> <span class="toc-text">三、编码风格</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -265,8 +392,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

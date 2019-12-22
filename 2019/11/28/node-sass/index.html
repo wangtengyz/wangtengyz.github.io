@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/10 | 爱烨子的前端汪的个人博客</title>
+  <title>node-sass 安装失败的原因及解决办法 | 爱烨子的前端汪的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
-<meta name="keywords" content="web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5">
-<meta property="og:type" content="website">
-<meta property="og:title" content="爱烨子的前端汪的个人博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/10/index.html">
+  <meta name="description" content="node.js sass">
+<meta name="keywords" content="node.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="node-sass 安装失败的原因及解决办法">
+<meta property="og:url" content="http://yoursite.com/2019/11/28/node-sass/index.html">
 <meta property="og:site_name" content="爱烨子的前端汪的个人博客">
-<meta property="og:description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
+<meta property="og:description" content="node.js sass">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-12-22T11:42:48.901Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爱烨子的前端汪的个人博客">
-<meta name="twitter:description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
+<meta name="twitter:title" content="node-sass 安装失败的原因及解决办法">
+<meta name="twitter:description" content="node.js sass">
   
     <link rel="alternative" href="/atom.xml" title="爱烨子的前端汪的个人博客" type="application/atom+xml">
   
@@ -151,98 +152,236 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-node-sass" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/redux-base/" class="archive-article-date">
-  	<time datetime="2019-10-30T15:56:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/30/redux-base/">redux基础分享</a>
+    <h1 class="article-title" itemprop="name">
+      node-sass 安装失败的原因及解决办法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/11/28/node-sass/" class="archive-article-date">
+  	<time datetime="2019-11-28T12:16:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="node-sass-安装失败的原因及解决办法"><a href="#node-sass-安装失败的原因及解决办法" class="headerlink" title="node-sass 安装失败的原因及解决办法"></a>node-sass 安装失败的原因及解决办法</h3><p>目录</p>
+<ul>
+<li>一、node-sass 安装失败的原因</li>
+<li>二、解决办法</li>
+<li>三、安装失败后重新安装问题</li>
+<li>四、其他问题<a id="more"></a>
+
+</li>
+</ul>
+<h3 id="一、node-sass-安装失败的原因"><a href="#一、node-sass-安装失败的原因" class="headerlink" title="一、node-sass 安装失败的原因"></a>一、node-sass 安装失败的原因</h3><p>最近开发其他中，npm install 时偶尔遇到报错：没有安装node-sass 安装失败的问题，百度之后发现是被墙了，但根据百度的方法换了淘宝镜像和用了vpn都安装失败，最后发现原来是因为没有卸载之前安装失败的包导致的。本人最后的解决方案是先卸载以前安装失败的包，npm uninstall node-sass，然后使用淘宝镜像源重新安装了一遍就成功了。</p>
+<p>npm 安装 node-sass 依赖时，会从 github.com 上下载 .node 文件。由于国内网络环境的问题，这个下载时间可能会很长，甚至导致超时失败。</p>
+<p>解决方案就是使用其他源，或者使用工具下载，然后将安装源指定到本地。</p>
+<h3 id="二、解决办法"><a href="#二、解决办法" class="headerlink" title="二、解决办法"></a>二、解决办法</h3><h4 id="解决方法一：使用淘宝镜像源（推荐）"><a href="#解决方法一：使用淘宝镜像源（推荐）" class="headerlink" title="解决方法一：使用淘宝镜像源（推荐）"></a>解决方法一：使用淘宝镜像源（推荐）</h4><p>设置变量 sass_binary_site，指向淘宝镜像地址。示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">npm i node-sass --sass_binary_site=https://npm.taobao.org/mirrors/node-sass/</span><br><span class="line"></span><br><span class="line">// 也可以设置系统环境变量的方式。示例</span><br><span class="line">// mac 下</span><br><span class="line">SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ npm install node-sass</span><br><span class="line"></span><br><span class="line">// window 下</span><br><span class="line">set SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/ &amp;&amp; npm install node-sass</span><br></pre></td></tr></table></figure>
+
+<p>或者设置全局镜像源：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/</span><br></pre></td></tr></table></figure>
+
+<p>或者安装nrm切换源：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Mac 上全局安装要加 sudo</span><br><span class="line">npm install -g nrm </span><br><span class="line">// 查看所有的可用的源</span><br><span class="line">nrm ls</span><br><span class="line">// 切换源</span><br><span class="line">nrm use 源的名字</span><br></pre></td></tr></table></figure>
+
+<h4 id="解决方法二：使用-cnpm"><a href="#解决方法二：使用-cnpm" class="headerlink" title="解决方法二：使用 cnpm"></a>解决方法二：使用 cnpm</h4><p>使用 cnpm 安装 node-sass 会默认从淘宝镜像源下载，也是一个办法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install node-sass</span><br></pre></td></tr></table></figure>
+
+<h4 id="解决方法三：创建-npmrc文件"><a href="#解决方法三：创建-npmrc文件" class="headerlink" title="解决方法三：创建.npmrc文件"></a>解决方法三：创建.npmrc文件</h4><p>在项目根目录创建.npmrc文件，复制下面代码到该文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">phantomjs_cdnurl=http://cnpmjs.org/downloads</span><br><span class="line">sass_binary_site=https://npm.taobao.org/mirrors/node-sass/</span><br><span class="line">registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>保存后 删除之前安装失败的包(第一次安装请跳过此步)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall node-sass</span><br></pre></td></tr></table></figure>
+
+<p>重新安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install node-sass</span><br></pre></td></tr></table></figure>
+
+<p>此方式有时还是会失效报错，改用方法一成功</p>
+<h3 id="三、安装失败后重新安装问题"><a href="#三、安装失败后重新安装问题" class="headerlink" title="三、安装失败后重新安装问题"></a>三、安装失败后重新安装问题</h3><p>之前安装失败，再安装就不去下载了，怎么办呢？那就先卸载再安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall node-sass</span><br><span class="line">npm i node-sass --sass_binary_site=https://npm.taobao.org/mirrors/node-sass/</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、其他问题"><a href="#四、其他问题" class="headerlink" title="四、其他问题"></a>四、其他问题</h3><p>有时候，按照上面的方法都试过，在项目编译或者打包的时候还是node-sass报错的话，那就需要看看log日志了，可能是其他npm包版本不对导致，再试试排查其他npm，博主就遇到一次安装上面的方法一下载好node-saas后，编译报错，要我重新安装node-sass，重新安装几次都是这样。后面发现是一个npm包ice-script版本的问题，将它后退到v1.9.3版本就好了。出了问题，不要着急，多看看log日志，排查原因，大多数都是想关联的npm包版本不对。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">redux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/28/node-sass/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/20/hexo/" class="archive-article-date">
-  	<time datetime="2019-10-20T15:56:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-20</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/11/30/javaScrip基础实践/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          javaScrip基础实践（一）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/30/redux-base/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">redux基础分享</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/20/hexo/">​如何搭建个人博客框架--hexo</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#node-sass-安装失败的原因及解决办法"><span class="toc-number">1.</span> <span class="toc-text">node-sass 安装失败的原因及解决办法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一、node-sass-安装失败的原因"><span class="toc-number">2.</span> <span class="toc-text">一、node-sass 安装失败的原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、解决办法"><span class="toc-number">3.</span> <span class="toc-text">二、解决办法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#解决方法一：使用淘宝镜像源（推荐）"><span class="toc-number">3.1.</span> <span class="toc-text">解决方法一：使用淘宝镜像源（推荐）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解决方法二：使用-cnpm"><span class="toc-number">3.2.</span> <span class="toc-text">解决方法二：使用 cnpm</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解决方法三：创建-npmrc文件"><span class="toc-number">3.3.</span> <span class="toc-text">解决方法三：创建.npmrc文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、安装失败后重新安装问题"><span class="toc-number">4.</span> <span class="toc-text">三、安装失败后重新安装问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、其他问题"><span class="toc-number">5.</span> <span class="toc-text">四、其他问题</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -265,8 +404,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

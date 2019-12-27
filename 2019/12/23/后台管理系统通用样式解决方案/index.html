@@ -6,19 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: javaScript | 爱烨子的前端汪的个人博客</title>
+  <title>后台管理系统通用样式解决方案 | 爱烨子的前端汪的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
-<meta name="keywords" content="web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5">
-<meta property="og:type" content="website">
-<meta property="og:title" content="爱烨子的前端汪的个人博客">
-<meta property="og:url" content="http://yoursite.com/tags/javaScript/index.html">
+  <meta name="description" content="后台管理系统通用样式解决方案">
+<meta name="keywords" content="Less">
+<meta property="og:type" content="article">
+<meta property="og:title" content="后台管理系统通用样式解决方案">
+<meta property="og:url" content="http://yoursite.com/2019/12/23/后台管理系统通用样式解决方案/index.html">
 <meta property="og:site_name" content="爱烨子的前端汪的个人博客">
-<meta property="og:description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
+<meta property="og:description" content="后台管理系统通用样式解决方案">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://img.ikstatic.cn/MTU3Njk4ODcyMDMxMiM5NjAjcG5n.png">
+<meta property="og:updated_time" content="2019-12-27T12:29:23.933Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爱烨子的前端汪的个人博客">
-<meta name="twitter:description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
+<meta name="twitter:title" content="后台管理系统通用样式解决方案">
+<meta name="twitter:description" content="后台管理系统通用样式解决方案">
+<meta name="twitter:image" content="https://img.ikstatic.cn/MTU3Njk4ODcyMDMxMiM5NjAjcG5n.png">
   
     <link rel="alternative" href="/atom.xml" title="爱烨子的前端汪的个人博客" type="application/atom+xml">
   
@@ -151,60 +154,284 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-后台管理系统通用样式解决方案" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/30/javaScrip基础实践/" class="archive-article-date">
-  	<time datetime="2019-11-30T08:31:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/30/javaScrip基础实践/">javaScrip基础实践（一）</a>
+    <h1 class="article-title" itemprop="name">
+      后台管理系统通用样式解决方案
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/12/23/后台管理系统通用样式解决方案/" class="archive-article-date">
+  	<time datetime="2019-12-23T11:34:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>【demo】github地址：<a href="https://github.com/wangtengyz/css-solution" target="_blank" rel="noopener">https://github.com/wangtengyz/css-solution</a></p>
+<p>目录：</p>
+<p> 一、开发后台管理系统遇到的问题</p>
+<p>二、总结归纳通用样式类型</p>
+<p>三、less实现自定义动态模块通用样式的设定</p>
+<p>四、具体使用方式</p>
+<a id="more"></a>
+<h2 id="一、开发后台管理系统遇到的问题"><a href="#一、开发后台管理系统遇到的问题" class="headerlink" title="一、开发后台管理系统遇到的问题"></a>一、开发后台管理系统遇到的问题</h2><ol>
+<li><p>开发者更关注于业务代码不太关注样式，不太考虑样式的复用性。后台管理系统在很多业务场景下都会用到，由于其面向人群的特殊性，我们一般不太关注其界面布局，样式等。</p>
+</li>
+<li><p>大量重复样式编写，影响代码整洁度。在开发后台管理系统页面时发现，发现有很多常用样式，比如文字大小、外内边距、flex布局等等，是反复重复新建样式文件去重复编写的，就如pe管理系统【width: 200px】这个样式就在38个文件中出现100多次，【margin-left: 10px】在32个文件中出现135次,【font-size：12px/14px/16px】分别出现20/35/23次等等，代码会十分冗余。通过调研产品后台，发现一些常用样式是重复而且通用的，则可以提取出来作为公共样式进行使用，通过落地一套后台管理平台-通用样式解决方案从而提升开发页面效率。</p>
+</li>
+<li><p>大量建立不必要less文件（其实里面可能就是设定一个盒子的外内边距或者flex布局样式）,浪费开发时间。后面codeReview代码样式写在行内里面常被diss，所以有时候只想设定一个input框宽度等于240px或者根据产品需求调整一个div的外内边距加减5px等等，不得不建立一个less文件，然后为了防止less文件类名的独立性，还得定一长串类名拼接等等，十分繁琐。</p>
+</li>
+<li><p>不方便批量修改样式，比如颜色、文字大小、外内边距等等。</p>
+</li>
+</ol>
+<h2 id="二、总结归纳通用样式类型"><a href="#二、总结归纳通用样式类型" class="headerlink" title="二、总结归纳通用样式类型"></a>二、总结归纳通用样式类型</h2><p>将通用样式归纳为两大模块，一个是样式通用基本模块（common.less），比如栅格布局、flex布局、清除浮动等。另一个是根据项目原型图自定义动态模块(color.js/size.js)，比如颜色，大小，内外边距等等，方便批量修改、添加和维护迭代。</p>
+<ol>
+<li>通用基本模块有（具体看assets/base/common.less）</li>
+</ol>
+<ul>
+<li><p>栅格定义</p>
+<p>  栅格定义<br>  默认12栅格,row表示行，cols-<em>表示每行多少列，cell表示单元格，c</em>表示大小<br>  举例说明：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 定义cell单元格样式</span><br><span class="line">.cell&#123;position: relative;float: left;min-height: 1px&#125;</span><br><span class="line">// 表示添加类名为c1或者在父盒子类名为cols-12子盒子类名为cell的盒子宽度为12分之一</span><br><span class="line">.c1,.cols-12&gt;.c1,.cols-12&gt;.cell &#123;width:8.33333333%&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>flex布局</p>
+<p>  将flex的属性根据功能拆分在类名里，通过自由组合类名，实现flex布局</p>
+</li>
+<li><p>位置相关样式</p>
+<p>  盒子dispaly、position、float、overflow等属性及文字text-aligh属性</p>
+</li>
+<li><p>边框相关样式</p>
+<p>  边框位置及形状</p>
+</li>
+<li><p>文字大小样式</p>
+<p>  定义了从11px - 40px 11种文字大小的类名样式（按实际项目需求来）</p>
+</li>
+<li><p>清除浮动</p>
+</li>
+<li><p>其他相关样式（可以根据项目特殊性自由添加）</p>
+</li>
+</ul>
+<ol start="2">
+<li>自定义动态模块有</li>
+</ol>
+<ul>
+<li><p>尺寸自定义模块【外内边距】（具体看assets/base/size.less）</p>
+</li>
+<li><p>颜色自定义模块【背景色,文字颜色,边框色(按钮可选)】 （具体看assets/base/color.less）</p>
+</li>
+</ul>
+<h2 id="三、less实现自定义动态模块通用样式的设定"><a href="#三、less实现自定义动态模块通用样式的设定" class="headerlink" title="三、less实现自定义动态模块通用样式的设定"></a>三、less实现自定义动态模块通用样式的设定</h2><ol>
+<li>设想：如何简洁明了通过类名来使样式生效，能够见名知其意，方便快速上手。</li>
+</ol>
+<p>尺寸自定义模块【外内边距】中页面样式的使用方式，就是className = ‘外内边距类型-方向-大小’，举例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 通过定义 @xs：5px， @xl：30px；</span><br><span class="line">// className=&quot;margin-top-xs&quot; 表示 margin-top：5px 外顶边距样式</span><br><span class="line">// className=&quot;padiing-left-xl&quot; 表示 padiing-left：30px 内左边距离样式</span><br><span class="line">// className=&quot;padiing-lr-xl&quot; 表示 padiing：0 30px 内边左右距离样式</span><br></pre></td></tr></table></figure>
+
+<p>颜色自定义模块【背景色,文字颜色,边框色(按钮可选)】，就是className = “类型(背景、文字、边框)-颜色”，举例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 通过定义 @bg：#eff2f6及边框、文字、背景三个类型函数；</span><br><span class="line">// className=&quot;boder-bg&quot; 表示 border:1px solid @bg 边框颜色样式为#eff2f6</span><br><span class="line">// className=&quot;text-bg&quot; 表示 color: @bg 文字颜色样式为#eff2f6</span><br><span class="line">// className=&quot;bg-bg&quot; 表示 background:@bg; 背景颜色样式为#eff2f6</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>以颜色自定义模块代码举例说明实现过程</li>
+</ol>
+<ul>
+<li><p>第一步 定义颜色变量 -&gt; 根据项目需求自由增删修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@bg:#eff2f6;    // 背景色</span><br><span class="line">@main:#00c6e4;  // 主色</span><br><span class="line">@sub:#8a73ed;   // 辅助色</span><br><span class="line">@red:#ff6d85;   // 红色</span><br><span class="line">@yellow:#f60;   // 黄色</span><br><span class="line">@blue:#5296ff;  // 蓝色</span><br><span class="line">@green:#2c7;    // 绿色</span><br><span class="line">@gray:#919191;  // 灰色</span><br><span class="line">@light:#f6f6f6; // 浅灰色</span><br><span class="line">@dark:#4c5355;  // 深灰色</span><br><span class="line">@black:#000;    // 黑色</span><br><span class="line">@white:#fff;    // 深灰色</span><br><span class="line">@ccc: #cccccc;  // 深灰色</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第二步 定义列表常量，方便后续递归循环生成类名对应类型对应颜色,需要用到普通变量和选择器变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@colorList: @bg, @main, @sub, @red, @yellow, @blue, @green, @gray, @light, @dark, @back, @black, @white;</span><br><span class="line">@colorTypeList: bg, main, sub, red, yellow, blue, green, gray, light, dark, back, black, white;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第三步 定义文字、边框、背景色函数混合方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// 边框色函数</span><br><span class="line">.border(@type,@color) &#123;</span><br><span class="line">    .border-@&#123;type&#125; &#123;</span><br><span class="line">        border:1px solid @color;</span><br><span class="line">    &#125;</span><br><span class="line">    .border-light-@&#123;type&#125; &#123;</span><br><span class="line">        border:1px solid .light(@color);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 文字颜色函数</span><br><span class="line">.text(@type,@color) &#123;</span><br><span class="line">    .text-@&#123;type&#125; &#123;</span><br><span class="line">        color:@color;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 背景色函数</span><br><span class="line">.bg(@type,@color) &#123;</span><br><span class="line">    .bg-@&#123;type&#125; &#123;</span><br><span class="line">        background:@color;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第四步 创建一个循环生成选择器的方法。Less并没有提供一个for等循环的方法，但是可以使用条件语句【when】递归的方法实现选择器的遍历，有循环就必须要有虚幻结束条件，我们就需要用到第二步的常量列表的长度、选择器名、属性值，从而获得生成选择器的名字和属性以及循环终止条件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 获取列表的长度  length(@bgcardList) </span><br><span class="line">// 获取列表元素  extract(@bgcardList, 3) </span><br><span class="line">.loopColor(@i) when (@i &lt; (length(@colorList)+1)) &#123;</span><br><span class="line">    .border(extract(@colorTypeList, @i), extract(@colorList, @i));</span><br><span class="line">    .text(extract(@colorTypeList, @i), extract(@colorList, @i));</span><br><span class="line">    .bg(extract(@colorTypeList, @i), extract(@colorList, @i));</span><br><span class="line">    .loopColor(@i+1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第五步 调用loopColor方法，批量生成样式,切记从1调起，不是0</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.loopColor(1);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>最终会在css文件中生成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">.text-red &#123; color: #ff6d85 &#125;</span><br><span class="line">.bg-red &#123; background: #ff6d85 &#125;</span><br><span class="line">.border-red &#123; border: 1px solid #ff6d85 &#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、具体使用方式"><a href="#四、具体使用方式" class="headerlink" title="四、具体使用方式"></a>四、具体使用方式</h2><ol>
+<li>全局引入’./assets/base/index.less’通用样式；</li>
+<li>直接在div上写选择器即可；</li>
+</ol>
+<ul>
+<li>代码举例：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line">import React, &#123; Component &#125; from &apos;react&apos;</span><br><span class="line"></span><br><span class="line">export default class CssSolution extends Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;h1&gt;后台管理系统通用样式部分效果展示&lt;/h1&gt;</span><br><span class="line">                &lt;h2 className=&quot;padding-xl text-green&quot;&gt;1.【外内边距】父盒子类名cols-10 clearfix 此盒子类名padding-xl  text-green&lt;/h2&gt;</span><br><span class="line">                &lt;div className=&quot;cols-8 clearfix&quot;&gt;</span><br><span class="line">                    &lt;div className=&quot;cell border padding-sm&quot;&gt;</span><br><span class="line">                        子盒子类名cell border padding-sm</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell border padding-sm&quot;&gt;</span><br><span class="line">                        子盒子类名cell border padding-sm</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell border padding-sm&quot;&gt;</span><br><span class="line">                        子盒子类名cell border padding-sm</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell border padding-sm&quot;&gt;</span><br><span class="line">                        子盒子类名cell border padding-sm</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell border padding-sm&quot;&gt;</span><br><span class="line">                        子盒子类名cell border padding-sm</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">                &lt;div className=&quot;margin-lg text-sub h3&quot;&gt;2.【栅格布局】父盒子类名cols-5 gutter-row gutter-xl 此盒子类名margin-lg  text-sub&lt;/div&gt;</span><br><span class="line">                &lt;div className=&quot;cols-5 gutter-row gutter-xl clearfix&quot;&gt;</span><br><span class="line">                    &lt;div className=&quot;cell text-center&quot;&gt;</span><br><span class="line">                        子盒子类名cell text-center</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell text-center&quot;&gt;</span><br><span class="line">                        子盒子类名cell text-center</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell text-center&quot;&gt;</span><br><span class="line">                        子盒子类名cell text-center</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell text-center&quot;&gt;</span><br><span class="line">                        子盒子类名cell text-center</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell text-center&quot;&gt;</span><br><span class="line">                        子盒子类名cell text-center</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell text-center&quot;&gt;</span><br><span class="line">                        子盒子类名cell text-center</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell text-center&quot;&gt;</span><br><span class="line">                        子盒子类名cell text-center</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell text-center&quot;&gt;</span><br><span class="line">                        子盒子类名cell text-center</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell text-center&quot;&gt;</span><br><span class="line">                        子盒子类名cell text-center</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell text-center&quot;&gt;</span><br><span class="line">                        子盒子类名cell text-center</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">                &lt;div className=&apos;margin-left-def text-yellow h4&apos;&gt;3.【flex布局】父盒子类名flex item-center 此盒子类名margin-left-def  text-yellow&lt;/div&gt;</span><br><span class="line">                &lt;div className=&quot;flex item-center&quot;&gt;</span><br><span class="line">                    &lt;div className=&quot;cell border&quot;&gt;</span><br><span class="line">                        子盒子类名border</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&quot;cell border radius margin-left-sm&quot;&gt;</span><br><span class="line">                        子盒子类名border radius margin-left-sm</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div  className=&quot;cell border margin-left-lg&quot;&gt;</span><br><span class="line">                        子盒子类名cell border margin-left-lg</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div  className=&quot;cell border padding-lg margin-left-sm&quot;&gt;</span><br><span class="line">                        子盒子类名cell border padding-lg margin-left-sm</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">                &lt;div className=&quot;text-main padding-lg h5&quot;&gt;4.【按钮样式】父盒子flex items-middle space-between 此盒子样式text-main padding-lg&lt;/div&gt;</span><br><span class="line">                &lt;div className=&quot;flex items-middle space-between&quot;&gt;</span><br><span class="line">                    &lt;div className=&quot;padding-def button-main pointer&quot;&gt;</span><br><span class="line">                        子盒子类名button-main pointer padding-def</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&apos;padding-def button-green pointer&apos;&gt;</span><br><span class="line">                        子盒子类名button-green pointer padding-def</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&apos;padding-def border-red&apos;&gt;</span><br><span class="line">                        子盒子类名border-red padding-def</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    &lt;div className=&apos;padding-def border-gray&apos;&gt;</span><br><span class="line">                        子盒子类名border-gray padding-def</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        )</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>部分效果展示：<br><img src="https://img.ikstatic.cn/MTU3Njk4ODcyMDMxMiM5NjAjcG5n.png" alt="举例"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Less</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/23/后台管理系统通用样式解决方案/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/12/20/Less语法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Less语法笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、开发后台管理系统遇到的问题"><span class="toc-number">1.</span> <span class="toc-text">一、开发后台管理系统遇到的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、总结归纳通用样式类型"><span class="toc-number">2.</span> <span class="toc-text">二、总结归纳通用样式类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、less实现自定义动态模块通用样式的设定"><span class="toc-number">3.</span> <span class="toc-text">三、less实现自定义动态模块通用样式的设定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、具体使用方式"><span class="toc-number">4.</span> <span class="toc-text">四、具体使用方式</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -227,9 +454,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

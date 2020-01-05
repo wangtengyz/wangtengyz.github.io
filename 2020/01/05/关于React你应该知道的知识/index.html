@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/11 | 爱烨子的前端汪的个人博客</title>
+  <title>关于React你应该知道系列 | 爱烨子的前端汪的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
-<meta name="keywords" content="web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5">
-<meta property="og:type" content="website">
-<meta property="og:title" content="爱烨子的前端汪的个人博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/11/index.html">
+  <meta name="description" content="React">
+<meta name="keywords" content="React">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于React你应该知道系列">
+<meta property="og:url" content="http://yoursite.com/2020/01/05/关于React你应该知道的知识/index.html">
 <meta property="og:site_name" content="爱烨子的前端汪的个人博客">
-<meta property="og:description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
+<meta property="og:description" content="React">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-01-05T15:43:53.369Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爱烨子的前端汪的个人博客">
-<meta name="twitter:description" content="爱烨子的前端汪的个人博客,是记录博主学习和成长的一个自媒体博客，发展方向：web前端开发、移动端开发、javascript、vue.js、webpack、Node.js、微信小程序、H5、TypeScript。">
+<meta name="twitter:title" content="关于React你应该知道系列">
+<meta name="twitter:description" content="React">
   
     <link rel="alternative" href="/atom.xml" title="爱烨子的前端汪的个人博客" type="application/atom+xml">
   
@@ -151,98 +152,209 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-关于React你应该知道的知识" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/30/javaScrip基础实践/" class="archive-article-date">
-  	<time datetime="2019-11-30T08:31:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-30</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/30/javaScrip基础实践/">javaScrip基础实践（一）</a>
+    <h1 class="article-title" itemprop="name">
+      关于React你应该知道系列
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/01/05/关于React你应该知道的知识/" class="archive-article-date">
+  	<time datetime="2020-01-05T14:21:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h3><p>一、 jsx语法你了解多少？  </p>
+<p>二、 React组件和元素的概念  </p>
+<p>三、 深入理解组件</p>
+<hr>
+<a id="more"></a>
+<h2 id="一、jsx语法你了解多少？"><a href="#一、jsx语法你了解多少？" class="headerlink" title="一、jsx语法你了解多少？"></a>一、jsx语法你了解多少？</h2><p>1.JSX语法由来  </p>
+<ul>
+<li><p>大背景： UI和数据分离一直是前端领域的一个重要关注点，前端领域发明了模板，将<code>UI的定义放入模板文件</code>，将<code>数据的逻辑维护在JS代码</code>中，然后通过模板引擎，根据数据和模板文件渲染出最终的HTML文件或代码片段。  </p>
+</li>
+<li><p>小背景： React致力于通过组件的概念将页面进行拆分并实现组件复用。React 认为，一个组件应该是具备UI描述和UI数据的完整体，不应该将它们分开处理，于是发明了JSX，作为<code>UI描述和UI数据之间的桥梁</code>。</p>
+</li>
+</ul>
+<p>2.JSX本质</p>
+<pre><code>* JSX 是一种用于描述UI的JavaScript扩展法，React使用这种语法描述组件的UI。本质上仍然是JavaScript。</code></pre><p>3.JSX不是必需的</p>
+<pre><code>* JSX语法对使用React来说并不是必需的，实际上，JSX语法只是React.createElement (component, props, ...children)的语法糖，所有的JSX语法最终都会被转换成对这个方法的调用。</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//JSX语法  </span><br><span class="line">const element = &lt;div className=&apos;foo&apos;&gt;Hello,React&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">//转换后</span><br><span class="line">const element = React.createElement(&apos;div&apos;, &#123;className:</span><br><span class="line">&apos;foo&apos;&#125;, &apos;Hello, React&apos;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、-React组件和元素的概念"><a href="#二、-React组件和元素的概念" class="headerlink" title="二、 React组件和元素的概念"></a>二、 React组件和元素的概念</h2><p>1.组件可以是类或者函数，他可以有state并将 props 作为输入然后返回一个元素的树形结构作为输出。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// Button是一个React组件</span><br><span class="line">class Button extends React.Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div className=&apos;foo&apos;&gt;</span><br><span class="line">                &lt;button className=&apos;blue&apos;&gt;</span><br><span class="line">                   OK</span><br><span class="line">                &lt;/button&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.元素是用来展现 DOM 节点或组件的一个普通 JavaScript 对象。元素是一个纯的，不需要进行状态变化且创建成本较低的对象。<code>并且元素也不是实际的组件实例</code>。这个对象通过DOM节点或React组件描述界面是什么样子的。你不能在元素上调用任何方法。它只是一个带有两个字段的不可变描述对象：type: (string | ReactClass) &amp;&amp; props: Object1。JSX语法就是用来创建React元素的。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">上面的JSX代码会创建下面的React元素：</span><br><span class="line">&#123;</span><br><span class="line">    type: &apos;div&apos;,</span><br><span class="line">    props: &#123;</span><br><span class="line">        className: &apos;foo&apos;,</span><br><span class="line">        children: &#123;</span><br><span class="line">            type: &apos;button&apos;,</span><br><span class="line">            props: &#123;</span><br><span class="line">                className: &apos;blue&apos;,</span><br><span class="line">                children: &apos;OK&apos;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javaScript</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">React</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/05/关于React你应该知道的知识/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/28/node-sass/" class="archive-article-date">
-  	<time datetime="2019-11-28T12:16:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-28</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/23/后台管理系统通用样式解决方案/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">后台管理系统通用样式解决方案</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/28/node-sass/">node-sass 安装失败的原因及解决办法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">node.js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#目录："><span class="toc-number">1.</span> <span class="toc-text">目录：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、jsx语法你了解多少？"><span class="toc-number"></span> <span class="toc-text">一、jsx语法你了解多少？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、-React组件和元素的概念"><span class="toc-number"></span> <span class="toc-text">二、 React组件和元素的概念</span></a>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -265,8 +377,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
